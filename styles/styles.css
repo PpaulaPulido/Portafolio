@@ -1,0 +1,279 @@
+*{
+	margin: 0;
+	padding: 0;	
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: nexa;
+}
+
+/* Resetear los estilos de las listas */
+.nav-list {
+	list-style: none;
+	margin-top: -1rem;
+	padding: 0;
+}
+
+.briefcase {
+	font-size: 2rem;
+	margin-right: 600px;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+	background-color: #038181;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	justify-content: end;
+	padding: 5px;
+}
+
+.nav-list li {
+	margin: 5px 10px;
+}
+
+.nav-list li:last-child {
+	margin-right: 0;
+}
+
+.nav-list a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.nav-text{
+	font-size: 22px;
+}
+.nav-list a:hover {
+	color: rgb(104, 248, 193);
+}
+
+/*estilos sobre mi*/
+
+.box {
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+
+.box img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+	max-width: 100%;
+}
+
+#aboutMe {
+	margin: 30px 25px;
+	width: fit-content;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.content-image{
+	margin: 0 auto;
+}
+.picture {
+	margin-right: 30px;
+	margin-left: 30px;
+	float: left;
+	border-radius: 10px;
+}
+.content {
+	text-align: center;
+}
+.content h1 {
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+	font-size: 40px;
+	text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.content h2 {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.text {
+	margin: 25px 100px 25px;
+	font-size: 20px;
+
+}
+
+.button {
+	margin: 25px auto;
+	padding: 10px;
+	background-color: #116161;
+	color: #fff;
+	border: 1px solid #116161;
+	border-radius: 10px;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	width: 300px;
+	height: 40px;
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+}
+
+.button a {
+	color: #fff;
+}
+@media (min-width: 768px){ 
+    #aboutMe {
+		flex-direction: row;
+	}
+	.content h2 {
+		text-align: left;
+	}
+	
+}
+
+/*estilos al carusel*/
+#technology {
+	min-height: 80vh;
+	background-image: linear-gradient(-45deg, #e3ddd9 50%, #116161 50%);
+	font-family: 'Raleway', sans-serif;
+}
+
+.titulo {
+	font-size: 40px;
+	font-family: 'Dancing Script', cursive;
+	color: #fff;
+}
+
+.subtitulo {
+	margin: 0;
+	color: #000;
+	display: inline;
+	font-size: 25px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-shadow: 4px 3px 4px rgba(216, 216, 216, 0.877);
+	margin-bottom: 40vh;
+
+}
+
+/* ------------------------- */
+/* Estilos de Materialize */
+/* ------------------------- */
+.carousel {
+	min-height: 500px;
+}
+
+.carousel .carousel-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	width: 400px;
+	height: 400px;
+}
+
+.carousel .carousel-item img {
+	cursor: pointer;
+	height: 50vh;
+	object-fit: cover;
+	position: absolute;
+	left: 0;
+	z-index: -1;
+	border-radius: 15px;
+}
+
+.carousel .indicators .indicator-item {
+	border-radius: 0;
+	transform: rotate(45deg);
+	margin: 0 15px;
+	background: #36221c;
+}
+/*estilos de proyectos*/
+#Projects{
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+}
+.card{
+	display: inline-block;
+	text-align: center;
+	width: 18rem;
+}
+.card:last-child {
+	margin-right: 0; /* Elimina el margen en la última tarjeta para evitar espacio extra */
+}
+/*estilos de contacto*/
+.box-contact {
+	border: 2px solid #038181;
+	width: 80%;
+	height: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 14px;
+	box-shadow: 3px 8px 13px rgba(0, 0, 0, 0.3);
+}
+
+.box-contact h1 {
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+	font-size: 50px;
+	margin-top: 0px;
+}
+
+.box-contact ul {
+	margin-left: 20px;
+	padding: 20px;
+	font-size: 20px;
+}
+.box-contact li{
+	margin-bottom: 10px;
+}
+.image-contact {
+	width: 50%;
+	float: left;
+	padding: 20px;
+	max-width: 100%;
+}
+@media (min-width: 768px){ 
+    .box-contact {
+		height: 500px;
+	}
+	.box-contact ul {
+		margin-top: 80px;
+	}
+	
+}
+/*estilos footer*/
+.footer {
+	background-color: #038181;
+	height: fit-content;
+	text-align: center;
+	color: #fff;
+}
+
+.footer h2 {
+	font-size: 20px;
+	padding-top: 20px;
+
+}
+
+.footer a {
+	color: #fff;
+	font-size: 25px;
+}
+
+.footer p {
+	margin-top: 30px;
+	padding-bottom: 10px;
+}

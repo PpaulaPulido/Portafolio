@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+/*Estilos para la barra de navegacion*/
+.header {
+    background-image: url('/Proyectos-Css/public/images/fondo.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    object-fit: cover;
+}
+
+.navbar {
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.navbar_list {
+    display: block;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_list li {
+    margin: 0 20px;
+}
+
+.navbar_list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar_list a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #0ef;
+    /* Color de la línea, ajusta según sea necesario */
+    bottom: -4px;
+    /* Ajusta la posición de la línea debajo del texto */
+    transition: width 0.3s ease;
+    /* Agrega una transición suave a la anchura de la línea */
+}
+
+.navbar_list a:hover::after {
+    width: 100%;
+}
+
+.navbar_list a:hover {
+    color: #0ef;
+}
+
+.briefcase {
+    font-size: 35px;
+}
+
+.nav-text {
+    font-size: 23px;
+}
+
+.header_container {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_title {
+    height: 100px;
+    width: 500px;
+    background-color: rgb(14, 5, 129);
+    border-radius: 20px;
+    box-shadow: 16px 14px 20px #0000008c;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_title::before {
+    content: "";
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    background-image: conic-gradient(rgb(250, 0, 229) 20deg, transparent 120deg);
+    animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.header_title::after {
+    content: "";
+    position: absolute;
+    height: 90px;
+    width: 690px;
+    background-color: black;
+    border-radius: 0;
+    /* Cambiado de 10% a 0 para tener esquinas rectas */
+    box-shadow: inset 16px 14px 20px #0000008c;
+}
+
+.title {
+    color: #fff;
+    font-size: 45px;
+    z-index: 2;
+    background-color: transparent;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+}
+@media (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+
+    .navbar_list {
+        display: flex;
+        align-items: center;
+        margin: 15px 0 0 0;
+        padding: 0;
+    }
+
+    .navbar_list li {
+        margin-right: 30px;
+    }
+
+    .briefcase {
+        margin-right: 500px;
+    }
+
+    .header_container {
+        height: 75vh;
+    }
+    .header_title {
+        height: 100px;
+        width: 700px;
+        background-color: rgb(134, 197, 16);
+        border-radius: 20px;
+        box-shadow: 16px 14px 20px #0000008c;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/*estilos del main*/
+main {
+    margin: 0;
+    padding: 30px;
+}
+
+.main {
+    background-color: #fff;
+    padding: 10px;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    padding: 20px;
+    margin: 50px auto;
+}
+
+.swiper {
+    width: 400px;
+}
+
+.card-content {
+    position: relative;
+    background: #000;
+    border: 3px solid #0ef;
+    border-radius: 20px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0ef;
+    clip-path: circle(55% at 0 0);
+    border-top-left-radius: 10px;
+}
+
+.card .card-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.card-content {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.card-content h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #0ef;
+}
+
+.image {
+    width: 210px;
+    height: 210px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+    border: 3px solid #000;
+    transition-property: transform, background-size;
+    transition-duration: .3s;
+}
+
+.image img:hover {
+    transform: scale(1.5);
+}
+
+button {
+    background-color: #0ef;
+    border: none;
+    color: #000;
+    margin: 20px 0 10px 0;
+    font-weight: 600;
+    padding: 8px 22px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: #038181;
+    color: #fff;
+}
+
+.swiper-pagination-bullet {
+    height: 8px;
+    width: 30px;
+    background: #0ef;
+    border-radius: 25px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: -580px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    margin-top: 590px;
+    color: #0ef;
+    font-weight: 900;
+
+}
+
+.swiper-button-next {
+    margin-right: 60px;
+}
+
+.swiper-button-prev {
+    margin-left: 60px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+    
+    .swiper {
+        width: 500px;
+    }
+    .image {
+        width: 300px;
+        height: 220px;
+    }
+}
+
+@media (min-width: 1050px) {
+    .swiper {
+        width: 990px;
+    }
+
+    .image {
+        width: 200px;
+        height: 170px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: -550px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        margin-top: 570px;
+    }
+
+}
+
+/*estilos footer*/
+.footer {
+    background-color: #038181;
+    text-align: center;
+    height: fit-content;
+    color: #fff;
+}
+
+.footer h2 {
+    font-size: 20px;
+    padding-top: 20px;
+    margin: 30px auto 20px auto;
+}
+
+.footer a {
+    color: #fff;
+    font-size: 25px;
+}
+
+.footer p {
+    margin-top: 30px;
+    padding-bottom: 10px;
+}

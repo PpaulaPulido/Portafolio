@@ -1,0 +1,6 @@
+@forward 'normalize';
+@forward 'variables';
+@forward 'globales';
+@forward 'tipografia';
+@forward 'mixins';
+//sirve para inculir archivo dentro de otros pero solo los incluyen, no los compilan en cambio use lo incluyen y lo usan
